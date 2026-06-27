@@ -4,7 +4,7 @@ Extract `.otf` / `.ttf` font files from Apple's official font DMGs on Linux. No 
 
 ## Download the Fonts
 
-Apple provides these as free downloads for developers. You need an Apple ID (free tier is fine).
+Apple provides these as free downloads for developers in .dmg format.
 
 **🔗 [https://developer.apple.com/fonts/](https://developer.apple.com/fonts/)**
 
