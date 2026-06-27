@@ -17,12 +17,42 @@ Download the DMGs you want (e.g. SF Pro, SF Compact, SF Mono, New York) and plac
 
 The script checks for these automatically and tells you what's missing.
 
+## Quick Start (Start Here)
+
+If you've never done this before and just want the fonts on your machine:
+
+```bash
+# Copy this project to your computer (save it somewhere like ~/Apple-system-fonts)
+git clone https://github.com/britl37/Apple-system-fonts.git ~/Apple-system-fonts
+
+# Go into the folder
+cd ~/Apple-system-fonts
+
+# Install what's needed (Debian/Ubuntu — adjust for your distro)
+sudo apt install p7zip-full coreutils
+
+# Put your downloaded .dmg files in this folder, then run:
+chmod +x extract_fonts.sh
+./extract_fonts.sh
+
+# Install the fonts into your system
+mkdir -p ~/.local/share/fonts
+cp -r extracted_fonts/* ~/.local/share/fonts/
+fc-cache -fv
+```
+
+> **Don't have git?** Download the ZIP from the green "Code" button at the top of this page, unzip it, and continue from the `cd` step above.
+
+## Prerequisites
+
+- **p7zip** — `sudo apt install p7zip-full` (Debian/Ubuntu) or equivalent
+- **coreutils** — `sudo apt install coreutilities` (provides `realpath`)
+
+The script also checks for these automatically and tells you what's missing.
+
 ## Usage
 
 ```bash
-# Make executable (first time only)
-chmod +x extract_fonts.sh
-
 # Extract all .dmg files in the current directory
 ./extract_fonts.sh
 
