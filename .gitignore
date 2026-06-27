@@ -1,0 +1,4 @@
+*.dmg
+extracted_fonts/
+*.zip
+.vscode/
